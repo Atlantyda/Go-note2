@@ -19,18 +19,18 @@
 
 <script>
 	export default {
-	components: {},
-	props: ["notes"],
-	data: function (){
-	return {}
-	},
-	methods: {
-	showNote: function (note){
-	this.$emit("on-show-note", note);
-	},
-	deleteNote: function (note){
-	this.$emit("on-delete-note", note);
-	}
-	},
+		components: {},
+		props: ["notes"],
+		data: function (){
+			return {}
+		},
+		methods: {
+			showNote: function (note){
+			this.$emit("on-show-note", note);
+			},
+			deleteNote: function (note){
+				this.$emit("on-delete-note", note);
+			}
+		},
 	}
 </script>

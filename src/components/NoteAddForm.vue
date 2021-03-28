@@ -7,31 +7,31 @@
 			<div class="mb-3">
 				<label for="exampleFormControlTextarea1" class="form-label">Treść</label>
 				<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" v-model="newNoteContent"></textarea>
-			</div>
-			<button type="submit" class="btn btn-primary w-100">
-				<i class="bi bi-save"></i>
-				Dodaj notatkę
-			</button>
-		</form>
-	</template>
+		</div>
+		<button type="submit" class="btn btn-primary w-100">
+			<i class="bi bi-save"></i>
+			Dodaj notatkę
+		</button>
+	</form>
+</template>
 	
-	<script>
-		export default {
+<script>
+	export default {
 		components: {},
 		data: function (){
-		return {
-		newNoteName: null,
-		newNoteContent: null,
-		}
+			return {
+			newNoteName: null,
+			newNoteContent: null,
+			}
 		},
 		methods: {
-		addNote: function (){
-		var date = (new Date()).toLocaleString("pl-Pl");
-		var note = { name: this.newNoteName, content: this.newNoteContent, createdAt: date };
-		this.$emit("on-add-note", note);
-		this.newNoteContent = null;
-		this.newNoteName = null;
-		}
+			addNote: function (){
+				var date = (new Date()).toLocaleString("pl-Pl");
+				var note = { name: this.newNoteName, content: this.newNoteContent, createdAt: date };
+				this.$emit("on-add-note", note);
+				this.newNoteContent = null;
+				this.newNoteName = null;
+			}
 		},
-		}
-	</script>	
+	}
+</script>	

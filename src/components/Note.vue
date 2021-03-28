@@ -11,11 +11,11 @@
 
 <script>
 	export default {
-	components: {},
-	props: ["note"],
-	data: function (){
-	return {}
-	},
-	methods: {},
+		components: {},
+		props: ["note"],
+		data: function (){
+			return {}
+		},
+		methods: {},
 	}
 </script>
